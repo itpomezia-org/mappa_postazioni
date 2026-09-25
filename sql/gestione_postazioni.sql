@@ -79,7 +79,7 @@ CREATE TABLE `system_login_utente` (
   `id_utente` int NOT NULL,
   `id_ruolo` int NOT NULL,
   `username` varchar(150) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
-  `password_hash` varchar(60) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `password_hash` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `primo_accesso` int NOT NULL DEFAULT '1',
   `token` varchar(150) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
   `data_cambio_password` datetime DEFAULT NULL,
@@ -277,7 +277,7 @@ CREATE TABLE `system_storico_psw` (
   `id` int NOT NULL,
   `id_utente` int NOT NULL,
   `id_ruolo` int NOT NULL,
-  `psw` varchar(60) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `psw` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `data_cambio_psw` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
